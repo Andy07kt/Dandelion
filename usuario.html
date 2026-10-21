@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dandelion - Mi Panel de Cliente</title>
+        <link rel="stylesheet" href="CSS/styles.css">
+        <script src="JS/scripts.js" defer></script>
+    </head>
+    <body>
+        <header>
+            <section class="contact">
+                <div class="telefono">
+                    <p>Llámenos: +56 950853184 | +56 953866631</p>
+                </div>
+                <div class="contacte">
+                    <a class="contacto1" href="contacto.html">Contáctenos-servicio a cliente</a>
+                </div>
+            </section>
+            
+            <section class="sec_logo">
+                <a href="index.html"><img class="logo" src="IMG/Captura de pantalla 2026-09-30 110654.png" alt="Logo Dandelion"></a>
+                <div class="carrito">
+                    <p>🛒</p>
+                </div>
+            </section>
+
+            <section>
+                <nav>
+                    <a href="index.html">Inicio</a>
+                    <a href="nosotros.html">Quiénes Somos</a>
+                    <a href="servicios.html">Catálogo</a>
+                    <a href="contacto.html">Contacto</a>
+                    <a href="panel_cliente.html" class="active">Mi Panel</a>
+                </nav>
+            </section>
+        </header>
+
+        <main>
+            <section class="contenedor-panel">
+                <div class="card-login card-panel-usuario">
+                    <div class="panel-header-usuario">
+                        <div>
+                            <h2>Hola, <span id="nombre-usuario-panel" class="texto-usuario-destacado">Usuario</span> 👋</h2>
+                            <p class="login-sub email-panel" id="email-usuario-panel">correo@ejemplo.com</p>
+                        </div>
+                        <button id="cerrar-sesion" class="btn-cerrar-sesion">Cerrar Sesión</button>
+                    </div>
+
+                    <h3 class="titulo-seccion-panel">Mis Pedidos y Diseños de Flores Imantadas</h3>
+                    
+                    <div class="info-pedido-destacado">
+                        <p><strong>Estado del último pedido:</strong> En preparación (Base magnética + 6 pétalos de rosa)</p>
+                        <p><strong>Fecha estimada de entrega:</strong> 3 días hábiles en Santiago</p>
+                    </div>
+
+                    <h3 class="titulo-seccion-panel">Historial de Cotizaciones</h3>
+                    <table class="tabla-cotizaciones">
+                        <tr class="tabla-fila-header">
+                            <th>ID Pedido</th>
+                            <th>Descripción</th>
+                            <th>Total</th>
+                            <th>Estado</th>
+                        </tr>
+                        <tr>
+                            <td>#DAN-2026-01</td>
+                            <td>Kit Flor Personalizada (Rosa + Amarillo)</td>
+                            <td>$18.990</td>
+                            <td class="estado-pagado">Pagado</td>
+                        </tr>
+                    </table>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="footer-contenido">
+                <div class="footer-columna">
+                    <h4>Florería Dandelion</h4>
+                    <p>Diseños florales exclusivos para momentos especiales.</p>
+                </div>
+    
+                <div class="footer-columna">
+                    <h4>Enlaces</h4>
+                    <p><a href="index.html">Inicio</a></p>
+                    <p><a href="servicios.html">Catálogo</a></p>
+                    <p><a href="contacto.html">Contacto</a></p>
+                </div>
+
+                <div class="footer-columna">
+                    <h4>Contacto</h4>
+                    <p>Teléfono: +56 950853184</p>
+                    <p>Atención: Lunes a Sábado</p>
+                </div>
+            </div>
+
+            <div class="footer-copyright">
+                <p>&copy; 2026 Dandelion. Todos los derechos reservados.</p>
+            </div>
+        </footer>
+    </body>
+</html>

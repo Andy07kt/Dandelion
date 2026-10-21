@@ -1,0 +1,762 @@
+/* ==========================================
+   VARIABLES DE COLOR (FLORERÍA)
+   ========================================== */
+:root {
+  /* Rosados */
+  --rosa-fondo: #fdf8f9;
+  --rosa-suave: #f9ecef;
+  --rosa-principal: #e295b5;
+  --rosa-oscuro: #be5a88;
+
+  /* Metálicos y Acentos */
+  --dorado: #d4af37;
+  --dorado-hover: #b89528;
+  --rojo-boton: #d62828;
+  --rojo-hover: #b71c1c;
+  --plateado-linea: #e8e8e8;
+
+  /* Textos y Base */
+  --texto-principal: #2d2629;
+  --texto-suave: #7a6e73;
+  --blanco: #ffffff;
+}
+
+/* ==========================================
+   RESET Y CONFIGURACIÓN GENERAL
+   ========================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--rosa-fondo);
+  color: var(--texto-principal);
+  display: flex;
+  flex-direction: column;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ==========================================
+   SECCIÓN DE LOGIN Y MI CUENTA
+   ========================================== */
+.contenedor-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 15px;
+}
+
+.card-login {
+  background-color: var(--blanco);
+  border-radius: 16px;
+  padding: 40px;
+  width: 100%;
+  max-width: 480px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid var(--plateado-linea);
+  border-top: 5px solid var(--rosa-oscuro);
+  text-align: center;
+}
+
+.card-login h2 {
+  color: var(--rosa-oscuro);
+  font-size: 1.8rem;
+  margin-bottom: 8px;
+}
+
+.login-sub {
+  color: var(--texto-suave);
+  font-size: 0.9rem;
+  margin-bottom: 25px;
+  line-height: 1.4;
+}
+
+.grupo-input {
+  text-align: left;
+  margin-bottom: 18px;
+}
+
+.grupo-input label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--texto-principal);
+  margin-bottom: 6px;
+}
+
+.grupo-input input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid var(--plateado-linea);
+  border-radius: 8px;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.grupo-input input:focus {
+  border-color: var(--rosa-oscuro);
+  box-shadow: 0 0 5px rgba(190, 90, 136, 0.2);
+}
+
+.opciones-login {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+  margin-bottom: 20px;
+  color: var(--texto-suave);
+}
+
+.olvido-pass {
+  color: var(--rosa-oscuro);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.olvido-pass:hover {
+  text-decoration: underline;
+}
+
+.btn-login {
+  width: 100%;
+  background-color: var(--rojo-boton);
+  color: var(--blanco);
+  border: none;
+  padding: 14px;
+  border-radius: 25px;
+  font-size: 0.95rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 10px rgba(214, 40, 40, 0.2);
+}
+
+.btn-login:hover {
+  background-color: var(--rojo-hover);
+  transform: translateY(-2px);
+}
+
+.login-footer {
+  margin-top: 25px;
+  padding-top: 15px;
+  border-top: 1px solid var(--plateado-linea);
+  font-size: 0.85rem;
+  color: var(--texto-suave);
+}
+
+.login-footer a {
+  color: var(--rosa-oscuro);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* ==========================================
+   ESTILOS PARA EL PANEL DE CLIENTE
+   ========================================== */
+.contenedor-panel {
+  padding: 40px 0;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.card-panel-usuario {
+  max-width: 100% !important;
+  text-align: left !important;
+}
+
+.panel-header-usuario {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid var(--plateado-linea);
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+.texto-usuario-destacado {
+  color: var(--rosa-oscuro);
+}
+
+.email-panel {
+  margin-bottom: 0 !important;
+}
+
+.btn-cerrar-sesion {
+  background-color: var(--texto-suave);
+  color: var(--blanco);
+  padding: 10px 18px;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-cerrar-sesion:hover {
+  background-color: var(--texto-principal);
+}
+
+.titulo-seccion-panel {
+  color: var(--rosa-oscuro);
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  margin-top: 20px;
+}
+
+.info-pedido-destacado {
+  background-color: var(--rosa-suave);
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-size: 0.95srem;
+}
+
+.tabla-cotizaciones {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.tabla-cotizaciones th, 
+.tabla-cotizaciones td {
+  padding: 10px;
+}
+
+.tabla-fila-header {
+  border-bottom: 1px solid var(--plateado-linea);
+  text-align: left;
+}
+
+.estado-pagado {
+  color: #2e7d32;
+  font-weight: bold;
+}
+
+/* ==========================================
+   BARRA DE CONTACTO SUPERIOR (.contact)
+   ========================================== */
+.contact {
+  display: flex;
+  background-color: var(--rosa-oscuro);
+  color: var(--blanco);
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  border-bottom: 3px solid var(--dorado); 
+}
+
+.telefono {
+  margin-left: 10%;
+  padding: 10px 0;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.contacte {
+  margin-right: 10%;
+  padding: 10px 0;
+  text-align: right;
+}
+
+.contacte a {
+  color: var(--blanco);
+  text-decoration: none;
+  font-weight: 500;
+  transition: opacity 0.3s ease;
+}
+
+.contacte a:hover {
+  opacity: 0.85;
+}
+
+/* ==========================================
+   SECCIÓN LOGO Y CARRITO (.sec_logo)
+   ========================================== */
+.sec_logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 10%;
+  background-color: var(--blanco);
+  border-bottom: 1px solid var(--plateado-linea);
+}
+
+.logo {
+  max-height: 80px;
+  object-fit: contain;
+}
+
+.carrito {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: var(--dorado);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.carrito:hover {
+  transform: scale(1.1);
+}
+
+/* ==========================================
+   NAVEGACIÓN (.nav)
+   ========================================== */
+nav {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  padding: 14px 0;
+  background-color: var(--blanco);
+  border-bottom: 1px solid var(--plateado-linea);
+}
+
+nav a {
+  color: var(--texto-principal);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 4px 6px;
+  transition: color 0.3s ease;
+}
+
+nav a:hover, 
+nav a.active {
+  color: var(--rosa-oscuro);
+  border-bottom: 2px solid var(--dorado);
+}
+
+/* ==========================================
+   MAIN: SECCIÓN ESTILO E-COMMERCE (GRID)
+   ========================================== */
+main {
+  width: 90%;
+  max-width: 1200px;
+  margin: 25px auto;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+}
+
+/* Banner Principal de la Izquierda */
+.main-banner {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  min-height: 380px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.main-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.main-banner-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(45, 38, 41, 0.85) 0%, rgba(45, 38, 41, 0.4) 60%, rgba(0,0,0,0) 100%);
+  color: var(--blanco);
+  padding: 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.badge {
+  background-color: var(--dorado);
+  color: var(--texto-principal);
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.main-banner-content h1 {
+  font-size: 2.2rem;
+  color: var(--blanco);
+  margin-bottom: 5px;
+}
+
+.tagline {
+  font-size: 1.1rem;
+  font-style: italic;
+  color: var(--rosa-principal);
+  margin-bottom: 10px;
+}
+
+.subtext {
+  font-size: 0.95rem;
+  max-width: 320px;
+  margin-bottom: 20px;
+  opacity: 0.9;
+}
+
+.btn-primary {
+  background-color: var(--rojo-boton);
+  color: var(--blanco);
+  padding: 12px 24px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 10px rgba(214, 40, 40, 0.3);
+}
+
+.btn-primary:hover {
+  background-color: var(--rojo-hover);
+  transform: translateY(-2px);
+}
+
+.banner-features {
+  display: flex;
+  gap: 15px;
+  margin-top: 25px;
+  font-size: 0.8rem;
+  opacity: 0.9;
+}
+
+/* Banners Secundarios de la Derecha */
+.side-banners {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.side-card {
+  position: relative;
+  border-radius: 16px;
+  padding: 25px;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+  color: var(--blanco);
+}
+
+.card-envio {
+  background: linear-gradient(135deg, #be5a88 0%, #7a2850 100%);
+}
+
+.card-ofertas {
+  background: linear-gradient(135deg, #d4af37 0%, #997b1a 100%);
+}
+
+.card-content h3 {
+  font-size: 1.3rem;
+  margin-bottom: 4px;
+}
+
+.card-content p {
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+  opacity: 0.9;
+}
+
+.btn-secondary {
+  background-color: var(--blanco);
+  color: var(--texto-principal);
+  padding: 6px 16px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: bold;
+  transition: opacity 0.3s ease;
+}
+
+.btn-secondary:hover {
+  opacity: 0.9;
+}
+
+/* ==========================================
+   SECCIÓN INFERIOR: CATEGORÍAS RÁPIDAS
+   ========================================== */
+.quick-categories {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.quick-categories h2 {
+  font-size: 1.6rem;
+  color: var(--texto-principal);
+}
+
+.section-sub {
+  color: var(--texto-suave);
+  font-size: 0.95rem;
+  margin-bottom: 25px;
+}
+
+.categories-circles {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.cat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.circle-icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: var(--rojo-boton);
+  color: var(--blanco);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.cat-item:hover .circle-icon {
+  transform: scale(1.08);
+  background-color: var(--rosa-oscuro);
+}
+
+.cat-item span {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--texto-principal);
+}
+
+
+/* ==========================================
+   SECCIÓN NOSOTROS (2 COLUMNAS CON IMAGEN GRANDE)
+   ========================================== */
+.contenedor_nosotros {
+  display: flex;
+  gap: 35px;
+  align-items: stretch; /* La imagen se estira para cubrir la altura del texto */
+  background-color: var(--blanco);
+  padding: 35px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  margin-bottom: 40px;
+  border: 1px solid var(--plateado-linea);
+}
+
+.columna_imagen {
+  flex: 1; /* Ocupa casi la mitad de la caja */
+  min-width: 420px; /* Asegura un ancho mínimo grande para la imagen */
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.img_nosotros {
+  width: 500px;
+  width: 100%;
+  
+  height: 100%;
+  object-fit: cover; /* Hace que la imagen llene todo el alto sin deformarse */
+  display: block;
+  border-radius: 10px;
+}
+
+.txt_nosotros {
+  flex: 1.2; /* Ocupa la otra mitad con el texto */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.txt_nosotros h2 {
+  font-size: 1.8rem;
+  color: var(--rosa-oscuro);
+  margin-bottom: 15px;
+}
+
+.txt_nosotros p {
+  line-height: 1.6;
+  color: var(--texto-principal);
+  font-size: 0.95rem;
+  margin-bottom: 14px;
+}
+
+/* En pantallas de teléfono o tabletas se pone vertical */
+@media (max-width: 900px) {
+  .contenedor_nosotros {
+    flex-direction: column;
+  }
+  .columna_imagen {
+    min-width: 100%;
+    height: 300px;
+  }
+}
+
+/* ==========================================
+   LISTA DE TRABAJADORES EN COLUMNA (ESTILO COMPLETO JS)
+   ========================================== */
+.seccion_trabajadores {
+  width: 100%;
+  margin: 40px 0;
+}
+
+.seccion_trabajadores h2 {
+  font-size: 1.8rem;
+  color: var(--rosa-oscuro);
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Contenedor que apila las tarjetas una debajo de otra */
+.columna-trabajadores {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+/* Tarjeta horizontal (Estilo ficha de creador) */
+.tarjeta-integrante {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  background-color: var(--blanco);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  border-left: 4px solid var(--dorado);
+  border-top: 1px solid var(--plateado-linea);
+  border-right: 1px solid var(--plateado-linea);
+  border-bottom: 1px solid var(--plateado-linea);
+  text-align: left;
+}
+
+/* Imagen circular de la izquierda */
+.tarjeta-integrante .perfil_img {
+  width: 160px;
+  height: 160px;
+  min-width: 160px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid var(--rosa-oscuro);
+}
+
+/* Información de la derecha */
+.tarjeta-integrante .perfil-info h3 {
+  font-size: 1.4rem;
+  color: var(--rosa-oscuro);
+  margin-bottom: 4px;
+}
+
+.tarjeta-integrante .perfil-info .rol {
+  font-weight: 600;
+  color: var(--dorado-hover);
+  margin-bottom: 12px;
+  font-size: 0.95rem;
+}
+
+.tarjeta-integrante .perfil-info p {
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+  color: var(--texto-principal);
+}
+
+.tarjeta-integrante .perfil-info ul {
+  padding-left: 20px;
+  line-height: 1.6;
+  font-size: 0.9rem;
+  color: var(--texto-principal);
+}
+
+.tarjeta-integrante .perfil-info li {
+  margin-bottom: 6px;
+}
+
+/* Adaptación responsive para celulares */
+@media (max-width: 768px) {
+  .tarjeta-integrante {
+    flex-direction: column;
+    text-align: center;
+  }
+  .tarjeta-integrante .perfil-info ul {
+    text-align: left;
+  }
+}
+
+/* En caso de pantalla pequeña */
+@media (max-width: 768px) {
+  .creador {
+    flex-direction: column;
+    text-align: center;
+  }
+  .perfil-info ul {
+    text-align: left;
+  }
+}
+
+/* Responsive para pantallas pequeñas */
+@media (max-width: 850px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================
+   FOOTER
+   ========================================== */
+footer {
+  background-color: var(--rosa-oscuro);
+  color: var(--blanco);
+  padding: 40px 10% 20px 10%;
+  border-top: 3px solid var(--dorado);
+  margin-top: 40px;
+}
+
+.footer-contenido {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  flex-wrap: wrap;
+  padding-bottom: 30px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.footer-columna h4 {
+  color: var(--dorado);
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+}
+
+.footer-columna a {
+  color: var(--blanco);
+  text-decoration: none;
+  opacity: 0.9;
+  transition: color 0.3s ease, opacity 0.3s ease;
+}
+
+.footer-columna a:hover {
+  color: var(--dorado);
+  opacity: 1;
+}
+
+.footer-copyright {
+  text-align: center;
+  padding-top: 20px;
+  font-size: 0.85rem;
+  color: var(--rosa-suave);
+}

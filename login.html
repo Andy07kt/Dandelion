@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dandelion - Mi Cuenta</title>
+        <link rel="stylesheet" href="CSS/styles.css">
+        <script src="JS/scripts.js" defer></script>
+    </head>
+    <body>
+        <header>
+            <section class="contact">
+                <div class="telefono">
+                    <p>Llámenos: +56 950853184 | +56 953866631</p>
+                </div>
+                <div class="contacte">
+                    <a class="contacto1" href="contacto.html">Contáctenos-servicio a cliente</a>
+                </div>
+            </section>
+            
+            <section class="sec_logo">
+                <a href="index.html"><img class="logo" src="IMG/Captura de pantalla 2026-09-30 110654.png" alt="Logo Dandelion"></a>
+                <div class="carrito">
+                    <p>🛒</p>
+                </div>
+            </section>
+
+            <section>
+                <nav>
+                    <a href="index.html">Inicio</a>
+                    <a href="nosotros.html">Quiénes Somos</a>
+                    <a href="servicios.html">Catálogo</a>
+                    <a href="contacto.html">Contacto</a>
+                    <a href="login.html" class="active">Mi Cuenta</a>
+                </nav>
+            </section>
+        </header>
+
+        <main>
+            <section class="contenedor-login">
+                
+                <!-- 1. FORMULARIO DE INICIAR SESIÓN (VISIBLE POR DEFECTO) -->
+                <div id="panel-login" class="card-login">
+                    <h2>Bienvenido a Dandelion 🌸</h2>
+                    <p class="login-sub">Ingresa a tu cuenta para gestionar tus pedidos y diseños de flores imantadas</p>
+
+                    <form id="form-login">
+                        <div class="grupo-input">
+                            <label for="usuario">Correo Electrónico:</label>
+                            <input type="email" id="usuario" name="usuario" placeholder="ejemplo@correo.com" required>
+                        </div>
+
+                        <div class="grupo-input">
+                            <label for="password">Contraseña:</label>
+                            <input type="password" id="password" name="password" placeholder="••••••••" required>
+                        </div>
+
+                        <button type="submit" class="btn-login">INGRESAR A MI CUENTA</button>
+                    </form>
+
+                    <div class="login-footer">
+                        <p>¿No tienes cuenta? <a href="#" id="ir-a-registro">Regístrate aquí</a></p>
+                    </div>
+                </div>
+
+                <!-- 2. FORMULARIO DE REGISTRO (OCULTO INICIALMENTE) -->
+                <div id="panel-registro" class="card-login" style="display: none;">
+                    <h2>Crea tu Cuenta 🌸</h2>
+                    <p class="login-sub">Regístrate para guardar tus diseños de flores imantadas y cotizaciones</p>
+
+                    <form id="form-registro">
+                        <div class="grupo-input">
+                            <label for="nombre-reg">Nombre Completo:</label>
+                            <input type="text" id="nombre-reg" name="nombre" placeholder="Tu nombre" required>
+                        </div>
+
+                        <div class="grupo-input">
+                            <label for="email-reg">Correo Electrónico:</label>
+                            <input type="email" id="email-reg" name="email" placeholder="ejemplo@correo.com" required>
+                        </div>
+
+                        <div class="grupo-input">
+                            <label for="pass-reg">Contraseña:</label>
+                            <input type="password" id="pass-reg" name="password" placeholder="••••••••" required>
+                        </div>
+
+                        <button type="submit" class="btn-login">REGISTRARSE</button>
+                    </form>
+
+                    <div class="login-footer">
+                        <p>¿Ya tienes una cuenta? <a href="#" id="ir-a-login">Inicia sesión aquí</a></p>
+                    </div>
+                </div>
+
+            </section>
+        </main>
+
+        <footer>
+            <div class="footer-contenido">
+                <div class="footer-columna">
+                    <h4>Florería Dandelion</h4>
+                    <p>Diseños florales exclusivos para momentos especiales.</p>
+                </div>
+    
+                <div class="footer-columna">
+                    <h4>Enlaces</h4>
+                    <p><a href="index.html">Inicio</a></p>
+                    <p><a href="servicios.html">Catálogo</a></p>
+                    <p><a href="contacto.html">Contacto</a></p>
+                </div>
+
+                <div class="footer-columna">
+                    <h4>Contacto</h4>
+                    <p>Teléfono: +56 950853184</p>
+                    <p>Atención: Lunes a Sábado</p>
+                </div>
+            </div>
+
+            <div class="footer-copyright">
+                <p>&copy; 2026 Dandelion. Todos los derechos reservados.</p>
+            </div>
+        </footer>
+    </body>
+</html>
