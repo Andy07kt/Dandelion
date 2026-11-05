@@ -3,9 +3,9 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Dandelion - Flor Imán</title>
+        <title>Dandelion - Quiénes Somos & Nuestro Proyecto</title>
         <link rel="stylesheet" href="CSS/styles.css">
-        <script src="JS/scripts.js"></script>
+        <script src="JS/scripts.js" defer></script>
     </head>
     <body>
         <header>
@@ -14,14 +14,15 @@
                     <p>Llámenos: +56 950853184 | +56 953866631</p>
                 </div>
                 <div class="contacte">
-                    <a class="contacto1" href="contacto.html">Contáctenos-servicio a cliente</a>
+                    <a class="contacto1" href="contacto.html">Contáctenos - Servicio a Cliente</a>
                 </div>
             </section>
             
             <section class="sec_logo">
                 <a href="index.html"><img class="logo" src="IMG/Captura de pantalla 2026-09-30 110654.png" alt="Logo Dandelion"></a>
-                <div class="carrito">
+                <div class="carrito" id="btn-carrito" onclick="verCarrito()" title="Ver Mi Carrito y Compras">
                     <p>🛒</p>
+                    <span class="contador-carrito" id="cart-count">0</span>
                 </div>
             </section>
 
@@ -37,43 +38,43 @@
         </header>
 
         <main>
+            <!-- CONTENEDOR PRINCIPAL DE QUIÉNES SOMOS -->
+            <div class="contenedor_nosotros">
+                <div class="columna_imagen">
+                    <img class="img_nosotros" src="IMG/flor_nosotros.jpg" alt="Flor Imán Dandelion">
+                </div>
+                
+                <div class="txt_nosotros">
+                    <h2>Quiénes Somos &amp; Nuestro Proyecto 🌸</h2>
+                    
+                    <p>En <strong>Dandelion</strong> redefinimos el concepto de los regalos tradicionales. Nos especializamos como un emprendimiento innovador enfocado en el diseño, desarrollo y comercialización de flores de metal e imanes totalmente armables, intercambiables y coleccionables.</p>
+                    
+                    <p><strong>💡 El problema que resolvemos:</strong> Los detalles tradicionales para parejas o decoración (como flores naturales, chocolates o peluches) son efímeros o genéricos: se marchitan en pocos días, se consumen o terminan olvidados en un cajón. En Dandelion resolvemos la falta de un regalo duradero y con verdadero significado, ofreciendo una experiencia compartida: una flor metálica que jamás se marchita y que puedes armar y personalizar con tus propias manos.</p>
 
+                    <p><strong>⚡ ¿Por qué somos diferentes?:</strong></p>
+                    <ul class="lista-diferencias">
+                        <li><strong>Frente a flores naturales:</strong> Cero marchitez. Duran para siempre y permiten rearmar combinaciones estéticas las veces que desees.</li>
+                        <li><strong>Frente a flores soldadas fijas:</strong> Nuestras flores utilizan un sistema de imanes de neodimio de alta fijación en bases y pétalos, permitiendo cambiar su forma, tonalidades (monocolor, claros, oscuros y mixes) y estructuras de forma dinámica.</li>
+                        <li><strong>Valor central y emocional:</strong> El obsequio no es solo un objeto decorativo de acero, sino la vivencia interactiva de armarlo, regalarlo y coleccionarlo en pareja.</li>
+                    </ul>
 
-   <div class="contenedor_nosotros">
-    <div class="columna_imagen">
-        <img class="img_nosotros" src="IMG/flor_nosotros.jpg" alt="Flor Imán Dandelion">
-    </div>
-    
-    <div class="txt_nosotros">
-        <h2>Quiénes Somos &amp; Nuestro Proyecto</h2>
-        
-        <p>En <strong>Dandelion</strong> redefinimos el concepto de los regalos tradicionales. Nos cualificamos como un emprendimiento innovador enfocado en el diseño, desarrollo y comercialización de flores de metal e imanes totalmente armables e intercambiables[cite: 18].</p>
-        
-        <p><strong>El problema que resolvemos:</strong> Los detalles tradicionales para parejas (como flores naturales, chocolates o peluches) son efímeros o genéricos: se marchitan, se consumen o terminan en un cajón[cite: 18]. En Dandelion resolvemos la falta de un regalo duradero y con significado, ofreciendo una experiencia compartida: una flor de metal que no se marchita y que la pareja arma con sus propias manos[cite: 18].</p>
-
-        <p><strong>¿Por qué somos diferentes?:</strong><br>
-        • <em>Frente a flores naturales:</em> No se marchitan, duran para siempre y se pueden rearmar las veces que desees[cite: 18].<br>
-        • <em>Frente a flores soldadas fijas:</em> Nuestras flores utilizan un sistema de imanes de neodimio en bases y pétalos, permitiendo cambiar su forma y colores dinámicamente[cite: 18].<br>
-        • <em>Valor central:</em> El regalo no es solo un objeto decorativo de acero, sino la experiencia interactiva de armarlo y personalizarlo en pareja[cite: 18].</p>
-
-        <p><strong>Público Objetivo:</strong> Diseñado para jóvenes y parejas de 18 a 35 años en Chile que buscan regalos originales, personalizados y con un valor emocional genuino por sobre lo convencional[cite: 18].</p>
-    </div>
-</div>
-
-        <!-- CONTENEDOR DE TRABAJADORES (Se renderiza dinámicamente desde JS) -->
-        <div class="seccion_trabajadores">
-            <h2>Nuestro Equipo & Organigrama</h2>
-            <div id="contenedor-trabajadores" class="columna-trabajadores">
-                <!-- JavaScript generará cada tarjeta en formato horizontal aquí -->
+                    <p><strong>🎯 Público Objetivo & Propósito:</strong> Diseñado especialmente para jóvenes y parejas de 18 a 35 años en Chile que buscan obsequios originales, con un alto valor estético, modularidad técnica y un sentido emocional genuino muy superior a lo convencional.</p>
+                </div>
             </div>
-        </div>
-    </section>
 
+            <!-- CONTENEDOR DE TRABAJADORES / EQUIPO -->
+            <div class="seccion_trabajadores">
+                <h2>Nuestro Equipo &amp; Organigrama</h2>
+                <div id="contenedor-trabajadores" class="columna-trabajadores">
+                    <!-- JavaScript generará cada tarjeta en formato horizontal aquí -->
+                </div>
+            </div>
         </main>
         
         <footer>
             <div class="footer-contenido">
                 <div class="footer-columna">
+                    <a href="index.html"><img class="logo" src="IMG/Captura de pantalla 2026-09-30 110654.png" alt="Logo Dandelion"></a>
                     <h4>Florería Dandelion</h4>
                     <p>Diseños florales exclusivos para momentos especiales.</p>
                 </div>
@@ -83,12 +84,14 @@
                     <p><a href="index.html">Inicio</a></p>
                     <p><a href="servicios.html">Catálogo</a></p>
                     <p><a href="contacto.html">Contacto</a></p>
+                    <p><a href="privacidad.html">Privacidad</a></p>
                 </div>
 
                 <div class="footer-columna">
                     <h4>Contacto</h4>
                     <p>Teléfono: +56 950853184</p>
                     <p>Atención: Lunes a Sábado</p>
+                    <a href="https://www.instagram.com/floreriadandelion/" target="_blank" rel="noopener noreferrer">Instagram: @floreriadandelion</a>
                 </div>
             </div>
 

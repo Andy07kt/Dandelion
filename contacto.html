@@ -3,9 +3,13 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Dandelion - Flor Imán</title>
+        <title>Dandelion - Contactar Soporte Comercial</title>
         <link rel="stylesheet" href="CSS/styles.css">
         <script src="JS/scripts.js"></script>
+
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+        
     </head>
     <body>
         <header>
@@ -20,8 +24,9 @@
             
             <section class="sec_logo">
                 <a href="index.html"><img class="logo" src="IMG/Captura de pantalla 2026-09-30 110654.png" alt="Logo Dandelion"></a>
-                <div class="carrito">
+                <div class="carrito" id="btn-carrito" onclick="verCarrito()" title="Ver Mi Carrito y Compras">
                     <p>🛒</p>
+                    <span class="contador-carrito" id="cart-count">0</span>
                 </div>
             </section>
 
@@ -37,12 +42,94 @@
         </header>
 
         <main>
-  
+            <section class="contenedor_contacto">
+                <div class="titulo_contacto">
+                    <h2>CONTACTAR SOPORTE COMERCIAL</h2>
+                </div>
+
+                <div class="contacto_grid_dos_columnas">
+                    
+                    <!-- COLUMNA IZQUIERDA: Información de Gestión Comercial y Redes -->
+                    <div class="tarjeta_info">
+                        <h3>Información del Desarrollador (Gestión Comercial)</h3>
+                        
+                        <div class="item_info">
+                            <div>
+                                <strong>Desarrollador:</strong> comercial@gmail.com (Dandelion Support)
+                            </div>
+                        </div>
+
+                        <div class="item_info">
+                            <div>
+                                <strong>Teléfono:</strong> +56 9 5085 3184 | +56 9 5386 6631
+                            </div>
+                        </div>
+
+                        <div class="item_info">
+                            <div>
+                                <strong>Instagram:</strong> @floreriaDandelion
+                            </div>
+                        </div>
+
+                        <div class="item_info">
+                            <div>
+                                <strong>TikTok:</strong> @Dandelion
+                            </div>
+                        </div>
+
+                        <h3 class="titulo_atencion_online">Atención 100% Online (E-commerce)</h3>
+                        <div class="item_info">
+                            <div>
+                                <p><strong>Atención:</strong> Lunes a Sábado de 09:00 a 19:00 hrs.</p>
+                            </div>
+                            <div id="mapa-cobertura"></div>
+
+                        </div>
+                    </div>
+
+                    <!-- COLUMNA DERECHA: Formulario de Contacto en HTML puro -->
+                    <div class="tarjeta_info">
+                        <h3>Contáctenos (Gestión Comercial)</h3>
+
+                        <form action="#" method="POST">
+                            <div class="fila_inputs_contacto">
+                                <div class="grupo-input input_nombre_apellido">
+                                    <label for="nombre">Nombre Completo (como aparece en Dandelion):</label>
+                                    <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+                                </div>
+                                <div class="grupo-input input_nombre_apellido">
+                                    <label for="apellido">Apellido:</label>
+                                    <input type="text" id="apellido" name="apellido" placeholder="Tu apellido" required>
+                                </div>
+                            </div>
+
+                            <div class="grupo-input">
+                                <label for="email">Correo Electrónico:</label>
+                                <input type="email" id="email" name="email" placeholder="tu.correo@ejemplo.com" required>
+                            </div>
+
+                            <div class="grupo-input">
+                                <label for="telefono_contacto">Teléfono:</label>
+                                <input type="tel" id="telefono_contacto" name="telefono" placeholder="Ej: 912345678" required>
+                            </div>
+
+                            <div class="grupo-input">
+                                <label for="mensaje">Mensaje (Comercial / Soporte):</label>
+                                <textarea id="mensaje" name="mensaje" placeholder="Escribe tu consulta comercial aquí..." rows="4" class="textarea_contacto" required></textarea>
+                            </div>
+
+                            <button type="submit" class="btn-login btn_enviar_contacto">Enviar Mensaje</button>
+                        </form>
+                    </div>
+
+                </div>
+            </section>
         </main>
 
         <footer>
             <div class="footer-contenido">
                 <div class="footer-columna">
+                    <a href="index.html"><img class="logo" src="IMG/Captura de pantalla 2026-09-30 110654.png" alt="Logo Dandelion"></a>
                     <h4>Florería Dandelion</h4>
                     <p>Diseños florales exclusivos para momentos especiales.</p>
                 </div>
@@ -52,12 +139,14 @@
                     <p><a href="index.html">Inicio</a></p>
                     <p><a href="servicios.html">Catálogo</a></p>
                     <p><a href="contacto.html">Contacto</a></p>
+                    <p><a href="privacidad.html">Privacidad</a></p>
                 </div>
 
                 <div class="footer-columna">
                     <h4>Contacto</h4>
                     <p>Teléfono: +56 950853184</p>
                     <p>Atención: Lunes a Sábado</p>
+                    <a href="https://www.instagram.com/floreriadandelion/" target="_blank" rel="noopener noreferrer">Instagram: @floreriadandelion</a>
                 </div>
             </div>
 

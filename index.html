@@ -3,9 +3,9 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Dandelion - Flor Imán</title>
+        <title>Dandelion - Flor Imán | Inicio</title>
         <link rel="stylesheet" href="CSS/styles.css">
-        <script src="JS/scripts.js"></script>
+        <script src="JS/scripts.js" defer></script>
     </head>
     <body>
         <header>
@@ -14,120 +14,207 @@
                     <p>Llámenos: +56 950853184 | +56 953866631</p>
                 </div>
                 <div class="contacte">
-                    <a class="contacto1" href="contacto.html">Contáctenos-servicio a cliente</a>
+                    <a class="contacto1" href="contacto.html">Contáctenos - Servicio a Cliente</a>
                 </div>
             </section>
             
             <section class="sec_logo">
                 <a href="index.html"><img class="logo" src="IMG/Captura de pantalla 2026-09-30 110654.png" alt="Logo Dandelion"></a>
-                <div class="carrito">
+                <div class="carrito" id="btn-carrito" onclick="verCarrito()" title="Ver Mi Carrito y Compras">
                     <p>🛒</p>
+                    <span class="contador-carrito" id="cart-count">0</span>
                 </div>
             </section>
 
             <section>
                 <nav>
-                    <a href="index.html"  class="active">Inicio</a>
+                    <a href="index.html" class="active">Inicio</a>
                     <a href="nosotros.html">Quiénes Somos</a>
                     <a href="servicios.html">Catálogo</a>
                     <a href="contacto.html">Contacto</a>
-                    <a href="finanzas.html">Finanzas</a>
                     <a href="login.html">Mi Cuenta</a>
                 </nav>
             </section>
         </header>
 
-       <main>
-    <!-- SECCIÓN PRINCIPAL: GRID ESTILO E-COMMERCE CON ENFOQUE EN PÉTALOS MAGNÉTICOS -->
-    <section class="hero-grid">
-        <!-- Banner Principal Grande (Izquierda) -->
-        <div class="main-banner">
-            <img src="IMG/Gemini_Generated_Image_g8id37g8id37g8id.jpg" alt="Flor Imán Dandelion">
-            <div class="main-banner-content">
-                <span class="badge">✨ Innovación Floral</span>
-                <h1>Colección Flor Imán</h1>
-                <p class="tagline">«Intercambia, combina y crea tu flor perfecta.»</p>
-                <p class="subtext">Todas nuestras flores cuentan con tecnología imantada. Cambia de pétalos entre rosas, flores amarillas y más según la ocasión.</p>
+        <main>
+            <!-- SECCIÓN PRINCIPAL: GRID E-COMMERCE -->
+            <section class="hero-grid">
+                <div class="main-banner">
+                    <img src="IMG/Gemini_Generated_Image_g8id37g8id37g8id.jpg" alt="Flor Imán Dandelion">
+                    <div class="main-banner-content">
+                        <span class="badge">✨ Innovación Floral</span>
+                        <h1>Colección Flor Imán</h1>
+                        <p class="tagline">«Intercambia, combina y crea tu flor perfecta.»</p>
+                        <p class="subtext">Todas nuestras flores cuentan con tecnología imantada. Cambia de pétalos entre tonos puros, claros, oscuros y bases independientes según la ocasión.</p>
+                        
+                        <a href="servicios.html" class="btn-primary">ARMÁ TU FLOR AQUÍ ➔</a>
+
+                        <div class="banner-features">
+                            <span>🧲 Pétalos Imantados</span>
+                            <span>🎨 100% Combinables</span>
+                            <span>🚚 Envíos en Santiago</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="side-banners">
+                    <div class="side-card card-envio">
+                        <img src="IMG/rn-image_picker_lib_temp_dea13faa-4b3c-4dab-805d-fdc3a145d8ba.jpg" alt="Pétalos Intercambiables">
+                        <div class="card-content">
+                            <h3>Pétalos Intercambiables</h3>
+                            <p>Monocolor, claros, oscuros y mixes</p>
+                            <a href="servicios.html" class="btn-secondary">Ver Catálogo</a>
+                        </div>
+                    </div>
+
+                    <div class="side-card card-ofertas">
+                        <img src="IMG/D_NQ_NP_682169-MLB99509289919_112025-O-pingente-petala-concha-colorida-abs-22x15mm-pacote-50-gramas.webp" alt="Set Flor + Pétalos Extra">
+                        <div class="card-content">
+                            <h3>Set Flor + Pétalos Extra</h3>
+                            <p>Combina tus colores favoritos</p>
+                            <a href="servicios.html" class="btn-secondary">Ver Oferta</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CATEGORÍAS RÁPIDAS EN CÍRCULOS -->
+            <section class="quick-categories">
+                <h2>Elige tus pétalos y arma tu diseño</h2>
+                <p class="section-sub">Bases magnéticas (rectas y curvas) y variedad de modelos para intercambiar cuando quieras</p>
                 
-                <a href="servicios.html" class="btn-primary">ARMÁ TU FLOR AQUÍ ➔</a>
-
-                <div class="banner-features">
-                    <span>🧲 Pétalos Imantados</span>
-                    <span>🎨 100% Combinables</span>
-                    <span>🚚 Envíos en Santiago</span>
+                <div class="categories-circles">
+                    <a href="servicios.html" class="cat-item">
+                        <div class="circle-icon">🌹</div>
+                        <span>Monocolor Puro</span>
+                    </a>
+                    <a href="servicios.html" class="cat-item">
+                        <div class="circle-icon">✨</div>
+                        <span>Tonos Claros</span>
+                    </a>
+                    <a href="servicios.html" class="cat-item">
+                        <div class="circle-icon">🍷</div>
+                        <span>Matices Oscuros</span>
+                    </a>
+                    <a href="servicios.html" class="cat-item">
+                        <div class="circle-icon">🧲</div>
+                        <span>Bases Rectas y Curvas</span>
+                    </a>
+                    <a href="servicios.html" class="cat-item">
+                        <div class="circle-icon">🎁</div>
+                        <span>Kits y Regalos</span>
+                    </a>
                 </div>
-            </div>
-        </div>
+            </section>
 
-        <!-- Banners Secundarios (Derecha) -->
-        <div class="side-banners">
-            <!-- Tarjeta 1: Concepto Pétalos -->
-            <div class="side-card card-envio">
-                <div class="card-content">
-                    <h3>Pétalos Intercambiables</h3>
-                    <p>Rosas, Flores Amarillas y más</p>
-                    <a href="servicios.html" class="btn-secondary">Ver Catálogo</a>
+            <!-- RESUMEN DE PRODUCTOS DESTACADOS -->
+            <section class="seccion-inicio-bloque">
+                <div class="encabezado-bloque-inicio">
+                    <h2>🌸 Productos Destacados del Catálogo</h2>
+                    <a href="servicios.html" class="enlace-general">Ver catálogo completo →</a>
                 </div>
-            </div>
-
-            <!-- Tarjeta 2: Kits y Set de Regalo -->
-            <div class="side-card card-ofertas">
-                <div class="card-content">
-                    <h3>Set Flor + Pétalos Extra</h3>
-                    <p>Combina tus colores favoritos</p>
-                    <a href="servicios.html" class="btn-secondary">Ver Oferta</a>
+                <div class="fila-productos">
+                    <div class="card-producto">
+                        <span class="badge-disponible">Disponible</span>
+                        <img src="IMG/petalos rojos intensos.png" alt="Pétalos Rojos">
+                        <h4>Pack Pétalos - 100% Rojo Puro</h4>
+                        <p class="descripcion-corta">Set de pétalos uniformes con borde dorado.</p>
+                        <p class="precio">$17.990</p>
+                        <button class="btn-agregar" onclick="agregarAlCarrito('Pack Pétalos 100% Rojo Puro', 17990)">Añadir al Carrito</button>
+                    </div>
+                    <div class="card-producto">
+                        <span class="badge-disponible">Disponible</span>
+                        <img src="IMG/blanco perla.png" alt="Pétalos Blanco Perla">
+                        <h4>Pack Pétalos - Blanco Perla</h4>
+                        <p class="descripcion-corta">Luminosidad y reflejos delicados.</p>
+                        <p class="precio">$18.990</p>
+                        <button class="btn-agregar" onclick="agregarAlCarrito('Pack Pétalos Blanco Perla', 18990)">Añadir al Carrito</button>
+                    </div>
+                    <div class="card-producto">
+                        <span class="badge-disponible">Disponible</span>
+                        <img src="IMG/Rojo Vino Profundo.png" alt="Pétalos Rojo Vino">
+                        <h4>Pack Pétalos - Rojo Vino Profundo</h4>
+                        <p class="descripcion-corta">Matiz oscuro burdeos sofisticado.</p>
+                        <p class="precio">$19.990</p>
+                        <button class="btn-agregar" onclick="agregarAlCarrito('Pack Pétalos Rojo Vino', 19.990)">Añadir al Carrito</button>
+                    </div>
+                    <div class="card-producto">
+                        <span class="badge-disponible">Disponible</span>
+                        <img src="IMG/Base Imantada Recta - Clásica.png" alt="Base Recta">
+                        <h4>Base Imantada Recta - Clásica</h4>
+                        <p class="descripcion-corta">Soporte metálico vertical independiente.</p>
+                        <p class="precio">$990</p>
+                        <button class="btn-agregar" onclick="agregarAlCarrito('Base Imantada Recta', 3990)">Añadir al Carrito</button>
+                    </div>
                 </div>
-            </div>
-        </div>
-    </section>
+            </section>
 
-    <!-- SECCIÓN INFERIOR: CATEGORÍAS DE PÉTALOS EN CÍRCULOS -->
-    <section class="quick-categories">
-        <h2>Elige tus pétalos y arma tu diseño</h2>
-        <p class="section-sub">Bases magnéticas y variedad de modelos para intercambiar cuando quieras</p>
+            <!-- RESUMEN DE QUIÉNES SOMOS -->
+            <section class="seccion-inicio-bloque texto-izquierda">
+                <span class="badge-subtitulo">SOBRE NOSOTROS</span>
+                <h2>Nuestra Esencia en Dandelion 🌸</h2>
+                <p>En <strong>Dandelion</strong> redefinimos el concepto de los regalos tradicionales. Somos un emprendimiento innovador enfocado en el desarrollo y comercialización de flores de metal con sistemas imantados de neodimio, totalmente armables e intercambiables.</p>
+                <p>Resolvemos la efimeridad de las flores naturales ofreciendo un detalle duradero, modular y con un alto valor emocional para regalar o decorar.</p>
+                <a href="nosotros.html" class="enlace-nosotros-btn">Conoce nuestra historia completa y al equipo →</a>
+            </section>
+
+            <!-- RESUMEN DE EQUIPO / ALTOS MANDOS -->
+            <section class="seccion-equipo-inicio">
+                <h2>👥 Parte de Nuestro Equipo</h2>
+                <div class="grid-equipo-inicio">
+                    <div class="card-equipo">
+                        <h3>Kemsley Choute</h3>
+                        <p class="rol-equipo">Líder de Proyecto &amp; Desarrollo Técnico</p>
+                        <p class="desc-equipo">Encargado de la arquitectura web, lógica del carrito y bases de datos modulares.</p>
+                    </div>
+                    <div class="card-equipo">
+                        <h3>Equipo de Colaboradores</h3>
+                        <p class="rol-equipo">Diseño &amp; Logística</p>
+                        <p class="desc-equipo">Especialistas en pruebas de ensamble magnético y atención al cliente en Santiago.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- RESUMEN DE CONTACTO -->
+            <section class="seccion-contacto-inicio">
+                <div class="flex-contacto-inicio">
+                    <div>
+                        <h2>¿Tienes dudas o necesitas ayuda? 📞</h2>
+                        <p>Comunícate con nuestro equipo de atención de lunes a sábado.</p>
+                        <div class="info-contacto-texto">
+                            <strong>📱 Teléfono:</strong> +56 950853184 | <strong>🕒 Horario:</strong> 09:00 - 19:00 hrs
+                        </div>
+                    </div>
+                    <div>
+                        <a href="contacto.html" class="btn-primary">IR A SOPORTE Y CONTACTO</a>
+                    </div>
+                </div>
+            </section>
+        </main>
         
-        <div class="categories-circles">
-            <div class="cat-item">
-                <div class="circle-icon">🌹</div>
-                <span>Pétalos de Rosa</span>
-            </div>
-            <div class="cat-item">
-                <div class="circle-icon">🌻</div>
-                <span>Flores Amarillas</span>
-            </div>
-            <div class="cat-item">
-                <div class="circle-icon">🌷</div>
-                <span>Tulipanes</span>
-            </div>
-            <div class="cat-item">
-                <div class="circle-icon">🧲</div>
-                <span>Bases Imantadas</span>
-            </div>
-            <div class="cat-item">
-                <div class="circle-icon">🎁</div>
-                <span>Kits Completos</span>
-            </div>
-        </div>
-    </section>
-</main>
         <footer>
             <div class="footer-contenido">
                 <div class="footer-columna">
+                    <a href="index.html"><img class="logo" src="IMG/Captura de pantalla 2026-09-30 110654.png" alt="Logo Dandelion"></a>
                     <h4>Florería Dandelion</h4>
-                    <p>Diseños florales exclusivos para momentos especiales.</p>
+                    <p>Diseños florales exclusivos y modulares para momentos especiales.</p>
                 </div>
     
                 <div class="footer-columna">
                     <h4>Enlaces</h4>
                     <p><a href="index.html">Inicio</a></p>
+                    <p><a href="nosotros.html">Quiénes Somos</a></p>
                     <p><a href="servicios.html">Catálogo</a></p>
                     <p><a href="contacto.html">Contacto</a></p>
+                    <p><a href="login.html">Mi Cuenta</a></p>
                 </div>
 
                 <div class="footer-columna">
                     <h4>Contacto</h4>
                     <p>Teléfono: +56 950853184</p>
                     <p>Atención: Lunes a Sábado</p>
+                    <a href="https://www.instagram.com/floreriadandelion/" target="_blank" rel="noopener noreferrer">Instagram: @floreriadandelion</a>
                 </div>
             </div>
 

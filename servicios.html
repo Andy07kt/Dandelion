@@ -3,9 +3,9 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Dandelion - Flor Imán</title>
+        <title>Dandelion - Catálogo de Pétalos y Bases Modulares</title>
         <link rel="stylesheet" href="CSS/styles.css">
-        <script src="JS/scripts.js"></script>
+        <script src="JS/scripts.js" defer></script>
     </head>
     <body>
         <header>
@@ -20,8 +20,10 @@
             
             <section class="sec_logo">
                 <a href="index.html"><img class="logo" src="IMG/Captura de pantalla 2026-09-30 110654.png" alt="Logo Dandelion"></a>
-                <div class="carrito">
+                <!-- El carrito ahora verifica la sesión al hacer clic -->
+                <div class="carrito" id="btn-carrito" onclick="verCarrito()" title="Ver Mi Carrito y Compras">
                     <p>🛒</p>
+                    <span class="contador-carrito" id="cart-count">0</span>
                 </div>
             </section>
 
@@ -37,14 +39,305 @@
         </header>
 
         <main>
-  
+            <section class="contenedor-catalogo">
+                <div class="encabezado-catalogo">
+                    <h2>Catálogo Modular Dandelion 🌸</h2>
+                    <p>Elige tus sets de pétalos favoritos y selecciona tu base por separado para personalizar tu arreglo.</p>
+                </div>
+
+                <div class="aviso-separado">
+                    💡 <strong>Nota importante:</strong> Los sets de pétalos y las bases se venden por separado para que puedas intercambiar y combinar tu estética libremente.
+                </div>
+
+                <div class="buscador-container">
+                    <input type="text" id="input-buscador" placeholder="🔍 Busca por color o tipo (ej: rojo, claros, oscuros, mix, base)..." onkeyup="filtrarCatalogo()">
+                </div>
+
+                <div id="catalogo-filas">
+
+                    <!-- SECCIÓN 1: PÉTALOS MONOCOLOR BÁSICOS -->
+                    <div class="seccion-categoria" data-categoria="petalos monocolor rojo amarillo azul rosa">
+                        <h3 class="titulo-categoria">Packs de Pétalos Monocolor (Colores Vivos)</h3>
+                        <div class="fila-productos">
+                            <div class="card-producto">
+                                <span class="badge-disponible">Disponible</span>
+                                <img src="IMG/petalos rojos intensos.png" alt="Pétalos Rojos">
+                                <h4>Pack Pétalos - 100% Rojo Puro</h4>
+                                <p class="descripcion-corta">Set de pétalos uniformes en tono rojo clásico con borde dorado.</p>
+                                <p class="precio">$17.990</p>
+                                <button class="btn-agregar" onclick="agregarAlCarrito('Pack Pétalos 100% Rojo Puro', 17990)">Añadir al Carrito</button>
+                            </div>
+                            <div class="card-producto">
+                                <span class="badge-disponible">Disponible</span>
+                                <img src="IMG/amarillo puro.png" alt="Pétalos Amarillos">
+                                <h4>Pack Pétalos - 100% Amarillo Puro</h4>
+                                <p class="descripcion-corta">Set de pétalos en tono brillante estilo girasol.</p>
+                                <p class="precio">$17.990</p>
+                                <button class="btn-agregar" onclick="agregarAlCarrito('Pack Pétalos 100% Amarillo Puro', 17990)">Añadir al Carrito</button>
+                            </div>
+                            <div class="card-producto">
+                                <span class="badge-no-disponible">Próximamente</span>
+                                <img src="IMG/azul puro.png" alt="Pétalos Azules">
+                                <h4>Pack Pétalos - 100% Azul Puro</h4>
+                                <p class="descripcion-corta">Set de pétalos uniformes en azul rey brillante.</p>
+                                <p class="precio">$17.990</p>
+                                <button class="btn-agregar" onclick="agregarAlCarrito('Pack Pétalos 100% Azul Puro', 17990)">Añadir al Carrito</button>
+                            </div>
+                            <div class="card-producto">
+                                <span class="badge-no-disponible">Próximamente</span>
+                                <img src="IMG/rosa pastel.png" alt="Pétalos Rosa">
+                                <h4>Pack Pétalos - 100% Rosa Pastel</h4>
+                                <p class="descripcion-corta">Set de pétalos en tono rosa tierno y romántico.</p>
+                                <p class="precio">$17.990</p>
+                                <button class="btn-agregar" onclick="agregarAlCarrito('Pack Pétalos 100% Rosa Pastel', 17990)">Añadir al Carrito</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SECCIÓN 2: PÉTALOS MONOCOLOR CLAROS -->
+                    <div class="seccion-categoria" data-categoria="petalos monocolor claros blanco celestes marfil">
+                        <h3 class="titulo-categoria">Packs de Pétalos (Tonos Claros y Luminosos)</h3>
+                        <div class="fila-productos">
+                            <div class="card-producto">
+                                <span class="badge-disponible">Disponible</span>
+                                <img src="IMG/blanco perla.png" alt="Pétalos Blanco Perla">
+                                <h4>Pack Pétalos - Blanco Perla Puro</h4>
+                                <p class="descripcion-corta">Elegancia luminosa con reflejos de luz sutiles.</p>
+                                <p class="precio">$18.990</p>
+                                <button class="btn-agregar" onclick="agregarAlCarrito('Pack Pétalos Blanco Perla', 18990)">Añadir al Carrito</button>
+                            </div>
+                            <div class="card-producto">
+                                <span class="badge-disponible">Disponible</span>
+                                <img src="IMG/celeste cielo.png" alt="Pétalos Celeste Cielo">
+                                <h4>Pack Pétalos - Celeste Cielo Claro</h4>
+                                <p class="descripcion-corta">Tono claro delicado de alta calidad visual.</p>
+                                <p class="precio">$18.990</p>
+                                <button class="btn-agregar" onclick="agregarAlCarrito('Pack Pétalos Celeste Cielo', 18990)">Añadir al Carrito</button>
+                            </div>
+                            <div class="card-producto">
+                                <span class="badge-no-disponible">Próximamente</span>
+                                <img src="IMG/Marfil Crema Suave.png" alt="Pétalos Marfil Crema">
+                                <h4>Pack Pétalos - Marfil Crema Suave</h4>
+                                <p class="descripcion-corta">Tonalidad clara cálida con acabados sutiles.</p>
+                                <p class="precio">$18.990</p>
+                                <button class="btn-agregar" onclick="agregarAlCarrito('Pack Pétalos Marfil Crema', 18990)">Añadir al Carrito</button>
+                            </div>
+                            <div class="card-producto">
+                                <span class="badge-no-disponible">Próximamente</span>
+                                <img src="IMG/Lila Pastel Claro.png" alt="Pétalos Lila Claro">
+                                <h4>Pack Pétalos - Lila Pastel Claro</h4>
+                                <p class="descripcion-corta">Tono claro romántico con brillo delicado.</p>
+                                <p class="precio">$18.990</p>
+                                <button class="btn-agregar" onclick="agregarAlCarrito('Pack Pétalos Lila Claro', 18990)">Añadir al Carrito</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SECCIÓN 3: PÉTALOS MATICES OSCUROS -->
+                    <div class="seccion-categoria" data-categoria="petalos oscuros vino noche negro azabache violeta">
+                        <h3 class="titulo-categoria">Packs de Pétalos (Matices Oscuros y Elegantes)</h3>
+                        <div class="fila-productos">
+                            <div class="card-producto">
+                                <span class="badge-disponible">Disponible</span>
+                                <img src="IMG/Rojo Vino Profundo.png" alt="Pétalos Rojo Vino">
+                                <h4>Pack Pétalos - Rojo Vino Profundo</h4>
+                                <p class="descripcion-corta">Tono burdeos oscuro con acabado refinado metálico.</p>
+                                <p class="precio">$19.990</p>
+                                <button class="btn-agregar" onclick="agregarAlCarrito('Pack Pétalos Rojo Vino', 19990)">Añadir al Carrito</button>
+                            </div>
+                            <div class="card-producto">
+                                <span class="badge-disponible">Disponible</span>
+                                <img src="IMG/azul noche.png" alt="Pétalos Azul Noche">
+                                <h4>Pack Pétalos - Azul Noche / Medianoche</h4>
+                                <p class="descripcion-corta">Azul oscuro profundo con destellos de elegancia.</p>
+                                <p class="precio">$19.990</p>
+                                <button class="btn-agregar" onclick="agregarAlCarrito('Pack Pétalos Azul Noche', 19990)">Añadir al Carrito</button>
+                            </div>
+                            <div class="card-producto">
+                                <span class="badge-no-disponible">Próximamente</span>
+                                <img src="IMG/Negro Azabache.png" alt="Pétalos Negro Azabache">
+                                <h4>Pack Pétalos - Negro Azabache</h4>
+                                <p class="descripcion-corta">Diseño exclusivo de máximo contraste y estilo sobrio.</p>
+                                <p class="precio">$19.990</p>
+                                <button class="btn-agregar" onclick="agregarAlCarrito('Pack Pétalos Negro Azabache', 19990)">Añadir al Carrito</button>
+                            </div>
+                            <div class="card-producto">
+                                <span class="badge-no-disponible">Próximamente</span>
+                                <img src="IMG/Violeta Místico Oscuro.png" alt="Pétalos Violeta Oscuro">
+                                <h4>Pack Pétalos - Violeta Místico Oscuro</h4>
+                                <p class="descripcion-corta">Matiz místico oscuro con reflejos perlados suaves.</p>
+                                <p class="precio">$19.990</p>
+                                <button class="btn-agregar" onclick="agregarAlCarrito('Pack Pétalos Violeta Oscuro', 19990)">Añadir al Carrito</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SECCIÓN 4: MIX DOS COLORES -->
+                    <div class="seccion-categoria" data-categoria="mix dos colores duo petalos">
+                        <h3 class="titulo-categoria">Packs de Pétalos - Mix de 2 Colores (Sets Dúo)</h3>
+                        <div class="fila-productos">
+                            <div class="card-producto">
+                                <span class="badge-disponible">Disponible</span>
+                                <img src="IMG/Rojo & Blanco Perla.png" alt="Mix Dúo Rojo y Blanco">
+                                <h4>Mix Pétalos Dúo - Rojo & Blanco Perla</h4>
+                                <p class="descripcion-corta">Combinación clásica de alto contraste entre rojo intenso y blanco.</p>
+                                <p class="precio">$21.990</p>
+                                <button class="btn-agregar" onclick="agregarAlCarrito('Mix Pétalos Dúo Rojo y Blanco', 21990)">Añadir al Carrito</button>
+                            </div>
+                            <div class="card-producto">
+                                <span class="badge-no-disponible">Próximamente</span>
+                                <img src="IMG/Rojo Vino y Rosa Pastel.png" alt="Mix Dúo Vino y Rosa">
+                                <h4>Mix Pétalos Dúo - Rojo Vino & Rosa Pastel</h4>
+                                <p class="descripcion-corta">Equilibrio entre un tono oscuro profundo y un color suave.</p>
+                                <p class="precio">$21.990</p>
+                                <button class="btn-agregar" onclick="agregarAlCarrito('Mix Pétalos Dúo Vino y Rosa', 21990)">Añadir al Carrito</button>
+                            </div>
+                            <div class="card-producto">
+                                <span class="badge-no-disponible">Próximamente</span>
+                                <img src="IMG/Azul Noche y Negro.png" alt="Mix Dúo Azul y Negro">
+                                <h4>Mix Pétalos Dúo - Azul Noche & Negro</h4>
+                                <p class="descripcion-corta">Estilo sobrio combinando dos tonos fríos y oscuros.</p>
+                                <p class="precio">$21.990</p>
+                                <button class="btn-agregar" onclick="agregarAlCarrito('Mix Pétalos Dúo Azul y Negro', 21990)">Añadir al Carrito</button>
+                            </div>
+                            <div class="card-producto">
+                                <span class="badge-no-disponible">Próximamente</span>
+                                <img src="IMG/Mix Pétalos Dúo.png" alt="Mix Dúo Libre">
+                                <h4>Mix Pétalos Dúo - Personalizado (Elige 2)</h4>
+                                <p class="descripcion-corta">Elige libremente tus dos colores favoritos para armar tu set.</p>
+                                <p class="precio">$22.990</p>
+                                <button class="btn-agregar" onclick="agregarAlCarrito('Mix Pétalos Dúo Personalizado', 22990)">Añadir al Carrito</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SECCIÓN 5: MIX TRES COLORES -->
+                    <div class="seccion-categoria" data-categoria="mix tres colores petalos">
+                        <h3 class="titulo-categoria">Packs de Pétalos - Mix de 3 Colores (Tricolor)</h3>
+                        <div class="fila-productos">
+                            <div class="card-producto">
+                                <span class="badge-no-disponible">Disponible</span>
+                                <img src="IMG/Mix Pétalos - Primarios (Rojo, Azul, Amarillo).png" alt="Mix Tricolor Primario">
+                                <h4>Mix Pétalos - Primarios (Rojo, Azul, Amarillo)</h4>
+                                <p class="descripcion-corta">Combinación de tres tonos esenciales en un solo paquete.</p>
+                                <p class="precio">$23.990</p>
+                                <button class="btn-agregar" onclick="agregarAlCarrito('Mix Pétalos Primarios', 23990)">Añadir al Carrito</button>
+                            </div>
+                            <div class="card-producto">
+                                <span class="badge-disponible">Disponible</span>
+                                <img src="IMG/Mix Pétalos - Atardecer (Rosa, Amarillo, Naranja).png" alt="Mix Atardecer">
+                                <h4>Mix Pétalos - Atardecer (Rosa, Amarillo, Naranja)</h4>
+                                <p class="descripcion-corta">Tonos cálidos seleccionados para arreglos vivos.</p>
+                                <p class="precio">$23.990</p>
+                                <button class="btn-agregar" onclick="agregarAlCarrito('Mix Pétalos Atardecer', 23990)">Añadir al Carrito</button>
+                            </div>
+                            <div class="card-producto">
+                                <span class="badge-no-disponible">Próximamente</span>
+                                <img src="IMG/Noche (Vino, Azul Noche, Negro).png" alt="Mix Elegante Oscuro">
+                                <h4>Mix Pétalos - Noche (Vino, Azul Noche, Negro)</h4>
+                                <p class="descripcion-corta">Combinación de tres tonos oscuros para un contraste elegante.</p>
+                                <p class="precio">$23.990</p>
+                                <button class="btn-agregar" onclick="agregarAlCarrito('Mix Pétalos Noche Oscuro', 23990)">Añadir al Carrito</button>
+                            </div>
+                            <div class="card-producto">
+                                <span class="badge-no-disponible">Próximamente</span>
+                                <img src="IMG/Mix Pétalos Tricolor - Personalizado (Elige 3).png" alt="Mix Tricolor Personalizado">
+                                <h4>Mix Pétalos Tricolor - Personalizado (Elige 3)</h4>
+                                <p class="descripcion-corta">Arma tu propia combinación de 3 colores a elección.</p>
+                                <p class="precio">$24.990</p>
+                                <button class="btn-agregar" onclick="agregarAlCarrito('Mix Pétalos Tricolor Personalizado', 24990)">Añadir al Carrito</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SECCIÓN 6: MIX CUATRO COLORES -->
+                    <div class="seccion-categoria" data-categoria="mix cuatro colores petalos arcoiris">
+                        <h3 class="titulo-categoria">Packs de Pétalos - Mix de 4 Colores</h3>
+                        <div class="fila-productos">
+                            <div class="card-producto">
+                                <span class="badge-disponible">Disponible</span>
+                                <img src="IMG/Mix Pétalos - Arcoíris (4 Tonos Variados).png" alt="Mix Arcoíris">
+                                <h4>Mix Pétalos - Arcoíris (4 Tonos Variados)</h4>
+                                <p class="descripcion-corta">Variedad completa para diseñar flores multicolores.</p>
+                                <p class="precio">$24.990</p>
+                                <button class="btn-agregar" onclick="agregarAlCarrito('Mix Pétalos Arcoíris', 24990)">Añadir al Carrito</button>
+                            </div>
+                            <div class="card-producto">
+                                <span class="badge-no-disponible">Próximamente</span>
+                                <img src="IMG/Mix Pétalos - Edición Festiva (4 Colores).png" alt="Mix Festivo">
+                                <h4>Mix Pétalos - Edición Festiva (4 Colores)</h4>
+                                <p class="descripcion-corta">Selección de cuatro colores vivos e intensos.</p>
+                                <p class="precio">$24.990</p>
+                                <button class="btn-agregar" onclick="agregarAlCarrito('Mix Pétalos Edición Festiva', 24990)">Añadir al Carrito</button>
+                            </div>
+                            <div class="card-producto">
+                                <span class="badge-no-disponible">Próximamente</span>
+                                <img src="IMG/Mix Pétalos - Colección Nocturna (4 Tonos).png" alt="Mix Nocturno">
+                                <h4>Mix Pétalos - Colección Nocturna (4 Tonos)</h4>
+                                <p class="descripcion-corta">Cuatro colores oscuros para un estilo moderno y serio.</p>
+                                <p class="precio">$24.990</p>
+                                <button class="btn-agregar" onclick="agregarAlCarrito('Mix Pétalos Colección Nocturna', 24990)">Añadir al Carrito</button>
+                            </div>
+                            <div class="card-producto">
+                                <span class="badge-no-disponible">Próximamente</span>
+                                <img src="IMG/Mix Pétalos - Personalizado (Elige 4).png" alt="Mix Libre">
+                                <h4>Mix Pétalos - Personalizado (Elige 4)</h4>
+                                <p class="descripcion-corta">Crea tu propio set seleccionando 4 colores a tu gusto.</p>
+                                <p class="precio">$25.990</p>
+                                <button class="btn-agregar" onclick="agregarAlCarrito('Mix Pétalos Personalizado', 25990)">Añadir al Carrito</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SECCIÓN 7: BASES MAGNÉTICAS -->
+                    <div class="seccion-categoria" data-categoria="bases recta curva metalica soporte">
+                        <h3 class="titulo-categoria">Bases Magnéticas (Elige tu Estructura)</h3>
+                        <div class="fila-productos">
+                            <div class="card-producto">
+                                <span class="badge-disponible">Disponible</span>
+                                <img src="IMG/Base Imantada Recta - Clásica.png" alt="Base Recta">
+                                <h4>Base Imantada Recta - Clásica</h4>
+                                <p class="descripcion-corta">Soporte vertical recto de alta estabilidad para escritorio.</p>
+                                <p class="precio">$990</p>
+                                <button class="btn-agregar" onclick="agregarAlCarrito('Base Imantada Recta', 1000)">Añadir al Carrito</button>
+                            </div>
+                            <div class="card-producto">
+                                <span class="badge-no-disponible">Próximamente</span>
+                                <img src="IMG/Base Imantada Curva - Orgánica.png" alt="Base Curva">
+                                <h4>Base Imantada Curva - Orgánica</h4>
+                                <p class="descripcion-corta">Diseño curvado ergonómico con caída natural tipo tallo real.</p>
+                                <p class="precio">$1.990</p>
+                                <button class="btn-agregar" onclick="agregarAlCarrito('Base Imantada Curva', 1990)">Añadir al Carrito</button>
+                            </div>
+                            <div class="card-producto">
+                                <span class="badge-no-disponible">Próximamente</span>
+                                <img src="IMG/Base Imantada Doble Curva.png" alt="Base Doble Curva">
+                                <h4>Base Imantada Doble Curva</h4>
+                                <p class="descripcion-corta">Estructura avanzada para acoplar múltiples niveles florales.</p>
+                                <p class="precio">$2.990</p>
+                                <button class="btn-agregar" onclick="agregarAlCarrito('Base Imantada Doble Curva', 2.990)">Añadir al Carrito</button>
+                            </div>
+                            <div class="card-producto">
+                                <span class="badge-no-disponible">Próximamente</span>
+                                <img src="IMG/Base Curva + Adaptador Giratorio.png" alt="Pack Adaptadores">
+                                <h4>Base Curva + Adaptador Giratorio</h4>
+                                <p class="descripcion-corta">Soporte curvado especial con conector magnético multidireccional.</p>
+                                <p class="precio">$3.990</p>
+                                <button class="btn-agregar" onclick="agregarAlCarrito('Base Curva + Adaptador Giratorio', 3.990)">Añadir al Carrito</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
         </main>
         
         <footer>
             <div class="footer-contenido">
                 <div class="footer-columna">
+                    <a href="index.html"><img class="logo" src="IMG/Captura de pantalla 2026-09-30 110654.png" alt="Logo Dandelion"></a>
                     <h4>Florería Dandelion</h4>
-                    <p>Diseños florales exclusivos para momentos especiales.</p>
+                    <p>Diseños florales modulares para momentos especiales.</p>
                 </div>
     
                 <div class="footer-columna">
@@ -52,12 +345,14 @@
                     <p><a href="index.html">Inicio</a></p>
                     <p><a href="servicios.html">Catálogo</a></p>
                     <p><a href="contacto.html">Contacto</a></p>
+                    <p><a href="privacidad.html">Privacidad</a></p>
                 </div>
 
                 <div class="footer-columna">
                     <h4>Contacto</h4>
                     <p>Teléfono: +56 950853184</p>
                     <p>Atención: Lunes a Sábado</p>
+                    <a href="https://www.instagram.com/floreriadandelion/" target="_blank" rel="noopener noreferrer">Instagram: @floreriadandelion</a>
                 </div>
             </div>
 

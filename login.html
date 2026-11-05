@@ -20,8 +20,9 @@
             
             <section class="sec_logo">
                 <a href="index.html"><img class="logo" src="IMG/Captura de pantalla 2026-09-30 110654.png" alt="Logo Dandelion"></a>
-                <div class="carrito">
+                <div class="carrito" id="btn-carrito" onclick="verCarrito()" title="Ver Mi Carrito y Compras">
                     <p>🛒</p>
+                    <span class="contador-carrito" id="cart-count">0</span>
                 </div>
             </section>
 
@@ -41,18 +42,18 @@
                 
                 <!-- 1. FORMULARIO DE INICIAR SESIÓN (VISIBLE POR DEFECTO) -->
                 <div id="panel-login" class="card-login">
-                    <h2>Bienvenido a Dandelion 🌸</h2>
+                    <h2> Bienvenido a Dandelion 🌸</h2>
                     <p class="login-sub">Ingresa a tu cuenta para gestionar tus pedidos y diseños de flores imantadas</p>
 
                     <form id="form-login">
                         <div class="grupo-input">
                             <label for="usuario">Correo Electrónico:</label>
-                            <input type="email" id="usuario" name="usuario" placeholder="ejemplo@correo.com" required>
+                            <input type="text" id="usuario" name="usuario" placeholder="ejemplo@correo.com" required>
                         </div>
 
                         <div class="grupo-input">
                             <label for="password">Contraseña:</label>
-                            <input type="password" id="password" name="password" placeholder="••••••••" required>
+                            <input type="text" id="password" name="password" placeholder="••••••••" required>
                         </div>
 
                         <button type="submit" class="btn-login">INGRESAR A MI CUENTA</button>
@@ -98,6 +99,7 @@
         <footer>
             <div class="footer-contenido">
                 <div class="footer-columna">
+                    <a href="index.html"><img class="logo" src="IMG/Captura de pantalla 2026-09-30 110654.png" alt="Logo Dandelion"></a>
                     <h4>Florería Dandelion</h4>
                     <p>Diseños florales exclusivos para momentos especiales.</p>
                 </div>
@@ -107,12 +109,14 @@
                     <p><a href="index.html">Inicio</a></p>
                     <p><a href="servicios.html">Catálogo</a></p>
                     <p><a href="contacto.html">Contacto</a></p>
+                    <p><a href="privacidad.html">Privacidad</a></p>
                 </div>
 
                 <div class="footer-columna">
                     <h4>Contacto</h4>
                     <p>Teléfono: +56 950853184</p>
                     <p>Atención: Lunes a Sábado</p>
+                    <a href="https://www.instagram.com/floreriadandelion/" target="_blank" rel="noopener noreferrer">Instagram: @floreriadandelion</a>
                 </div>
             </div>
 

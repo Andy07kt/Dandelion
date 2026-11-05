@@ -20,8 +20,9 @@
             
             <section class="sec_logo">
                 <a href="index.html"><img class="logo" src="IMG/Captura de pantalla 2026-09-30 110654.png" alt="Logo Dandelion"></a>
-                <div class="carrito">
+                <div class="carrito" id="btn-carrito" onclick="verCarrito()" title="Ver Mi Carrito y Compras">
                     <p>🛒</p>
+                    <span class="contador-carrito" id="cart-count">0</span>
                 </div>
             </section>
 
@@ -54,21 +55,20 @@
                         <p><strong>Fecha estimada de entrega:</strong> 3 días hábiles en Santiago</p>
                     </div>
 
-                    <h3 class="titulo-seccion-panel">Historial de Cotizaciones</h3>
-                    <table class="tabla-cotizaciones">
-                        <tr class="tabla-fila-header">
-                            <th>ID Pedido</th>
-                            <th>Descripción</th>
-                            <th>Total</th>
-                            <th>Estado</th>
-                        </tr>
-                        <tr>
-                            <td>#DAN-2026-01</td>
-                            <td>Kit Flor Personalizada (Rosa + Amarillo)</td>
-                            <td>$18.990</td>
-                            <td class="estado-pagado">Pagado</td>
-                        </tr>
-                    </table>
+                   <h3 class="titulo-seccion-panel">Historial de Reservas y Solicitudes</h3>
+    <table class="tabla-cotizaciones">
+        <thead>
+            <tr class="tabla-fila-header">
+                <th>ID Pedido</th>
+                <th>Flores Seleccionadas</th>
+                <th>Total Est.</th>
+                <th>Estado</th>
+            </tr>
+        </thead>
+        <tbody id="cuerpo-tabla-pedidos-usuario">
+            <!-- Las reservas reales del usuario se cargarán aquí dinámicamente -->
+        </tbody>
+    </table>
                 </div>
             </section>
         </main>
@@ -76,6 +76,7 @@
         <footer>
             <div class="footer-contenido">
                 <div class="footer-columna">
+                    <a href="index.html"><img class="logo" src="IMG/Captura de pantalla 2026-09-30 110654.png" alt="Logo Dandelion"></a>
                     <h4>Florería Dandelion</h4>
                     <p>Diseños florales exclusivos para momentos especiales.</p>
                 </div>
@@ -85,12 +86,14 @@
                     <p><a href="index.html">Inicio</a></p>
                     <p><a href="servicios.html">Catálogo</a></p>
                     <p><a href="contacto.html">Contacto</a></p>
+                    <p><a href="privacidad.html">Privacidad</a></p>
                 </div>
 
                 <div class="footer-columna">
                     <h4>Contacto</h4>
                     <p>Teléfono: +56 950853184</p>
                     <p>Atención: Lunes a Sábado</p>
+                    <a href="https://www.instagram.com/floreriadandelion/" target="_blank" rel="noopener noreferrer">Instagram: @floreriadandelion</a>
                 </div>
             </div>
 

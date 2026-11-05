@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dandelion - Panel de Administrador</title>
+        <link rel="stylesheet" href="CSS/styles.css">
+        <script src="JS/scripts.js" defer></script>
+    </head>
+    <body>
+        <header>
+            <section class="contact">
+                <div class="telefono">
+                    <p>Llámenos: +56 950853184 | +56 953866631</p>
+                </div>
+                <div class="contacte">
+                    <a class="contacto1" href="contacto.html">Contáctenos-servicio a cliente</a>
+                </div>
+            </section>
+            
+            <section class="sec_logo">
+                <a href="index.html"><img class="logo" src="IMG/Captura de pantalla 2026-09-30 110654.png" alt="Logo Dandelion"></a>
+                <div class="carrito" id="btn-carrito" onclick="verCarrito()" title="Ver Mi Carrito y Compras">
+                    <p>🛒</p>
+                    <span class="contador-carrito" id="cart-count">0</span>
+                </div>
+            </section>
+
+            <section>
+                <nav>
+                    <a href="index.html">Inicio</a>
+                    <a href="nosotros.html">Quiénes Somos</a>
+                    <a href="servicios.html">Catálogo</a>
+                    <a href="contacto.html">Contacto</a>
+                    <a href="panel_admin.html" class="active">Panel Admin</a>
+                </nav>
+            </section>
+        </header>
+
+        <main>
+            <section class="contenedor-admin">
+                <div class="card-admin" style="margin-bottom: 25px; display: flex; justify-content: space-between; align-items: center;">
+                    <div>
+                        <h2>Panel de Control - Administrador 🌸</h2>
+                        <p class="login-sub">Bienvenido, <strong id="nombre-admin-panel">Administrador</strong>. Aquí puedes gestionar el inventario y ver los clientes registrados.</p>
+                    </div>
+                    <div>
+                        <button id="cerrar-sesion" class="btn-login" style="padding: 10px 20px;">Cerrar Sesión</button>
+                    </div>
+                </div>
+
+                <!-- 1. TABLA DE GESTIÓN DE STOCK DE PRODUCTOS -->
+                <div class="card-admin">
+                    <h3>Gestión de Inventario y Stock de Flores Imantadas</h3>
+                    <table class="tabla-admin">
+                        <thead>
+                            <tr>
+                                <th>Producto</th>
+                                <th>Categoría</th>
+                                <th>Precio</th>
+                                <th>Estado Stock</th>
+                                <th>Acción</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Flor Imán Rosa Clásica</td>
+                                <td>Imantadas</td>
+                                <td>$4.990</td>
+                                <td><span id="badge-prod-1" class="badge-stock disponible">🟢 En Stock</span></td>
+                                <td>
+                                    <button class="btn-cambiar-stock" onclick="cambiarEstadoStock('prod-1')">Cambiar Estado</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Girasol Magnético Armable</td>
+                                <td>Especiales</td>
+                                <td>$6.500</td>
+                                <td><span id="badge-prod-2" class="badge-stock agotado">🔴 Agotado</span></td>
+                                <td>
+                                    <button class="btn-cambiar-stock" onclick="cambiarEstadoStock('prod-2')">Cambiar Estado</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- 2. TABLA DE CLIENTES REGISTRADOS AUTOMÁTICAMENTE -->
+                <div class="card-admin" style="margin-top: 30px;">
+                    <h3>Clientes Registrados en la Plataforma</h3>
+                    <table class="tabla-admin">
+                        <thead>
+                            <tr>
+                                <th>ID Cliente</th>
+                                <th>Nombre Completo</th>
+                                <th>Correo Electrónico</th>
+                                <th>Fecha de Registro</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tabla-usuarios-registrados">
+                            <!-- El script de JS llenará esta tabla automáticamente con los registros nuevos -->
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- 3. TABLA DE SOLICITUDES Y RESERVAS PENDIENTES DE CLIENTES -->
+    <div class="card-admin" style="margin-top: 30px;">
+        <h3>Solicitudes y Reservas Pendientes de Clientes 🌸</h3>
+        <table class="tabla-admin">
+            <thead>
+                <tr>
+                    <th>ID Reserva</th>
+                    <th>Cliente & Correo</th>
+                    <th>Flores Seleccionadas</th>
+                    <th>Total Est.</th>
+                    <th>Fecha</th>
+                    <th>Estado</th>
+                    <th>Acción</th>
+                </tr>
+            </thead>
+            <tbody id="tabla-pedidos-admin">
+                <!-- El script de JS llenará esta tabla con las solicitudes reales -->
+            </tbody>
+        </table>
+    </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="footer-contenido">
+                <div class="footer-columna">
+                    <a href="index.html"><img class="logo" src="IMG/Captura de pantalla 2026-09-30 110654.png" alt="Logo Dandelion"></a>
+                    <h4>Florería Dandelion</h4>
+                    <p>Diseños florales exclusivos para momentos especiales.</p>
+                </div>
+    
+                <div class="footer-columna">
+                    <h4>Enlaces</h4>
+                    <p><a href="index.html">Inicio</a></p>
+                    <p><a href="servicios.html">Catálogo</a></p>
+                    <p><a href="contacto.html">Contacto</a></p>
+                    <p><a href="privacidad.html">Privacidad</a></p>
+                </div>
+
+                <div class="footer-columna">
+                    <h4>Contacto</h4>
+                    <p>Teléfono: +56 950853184</p>
+                    <p>Atención: Lunes a Sábado</p>
+                    <a href="https://www.instagram.com/floreriadandelion/" target="_blank" rel="noopener noreferrer">Instagram: @floreriadandelion</a>
+                </div>
+            </div>
+
+            <div class="footer-copyright">
+                <p>&copy; 2026 Dandelion. Todos los derechos reservados.</p>
+            </div>
+        </footer>
+    </body>
+</html>
